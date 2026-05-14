@@ -135,6 +135,22 @@ function buildSlides() {
           <span class="s2-small">Welcome! this playlist was made by,</span>
           <h1 class="s2-name">${d.personal.name}</h1>
           <p class="s2-role">${d.personal.roles}</p>
+        <div class="s2-action-btns">
+          <a class="s2-btn s2-btn-cv"
+             href="${d.personal.cvLink}"
+             target="_blank"
+             rel="noopener noreferrer">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 1.5L18.5 9H13V3.5zM6 20V4h5v7h7v9H6z"/></svg>
+            View CV
+          </a>
+          <a class="s2-btn s2-btn-contact"
+             href="${d.personal.contactLink && d.personal.contactLink !== '#' ? d.personal.contactLink : 'mailto:' + d.personal.email}"
+             target="_blank"
+             rel="noopener noreferrer">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            Contact
+          </a>
+        </div>
         </div>
         <img class="s2-photo" src="${d.personal.photo}" alt="${d.personal.name}" />
       </div>
@@ -346,7 +362,6 @@ function buildSlides() {
 
   /* Extras */
   app.innerHTML += `<div class="progress-bar" id="progress"></div>`;
-  app.innerHTML += `<div class="key-hint">← → Arrow keys to navigate</div>`;
 
   updateProgress();
 }

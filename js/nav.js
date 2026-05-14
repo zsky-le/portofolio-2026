@@ -176,8 +176,8 @@ document.addEventListener('touchend', e => {
   const diffX = Math.abs(touchStartX - touchEndX);
 
   /* ignore if too short, or if it's mostly horizontal (carousel drag) */
-  if (Math.abs(diffY) < 120) return;
-  if (diffX > Math.abs(diffY) * 0.6) return;
+  if (Math.abs(diffY) < 360) return;
+  if (diffX > Math.abs(diffY) * 1.0) return;
 
   const idx = linearOrder.indexOf(currentSlide);
 
