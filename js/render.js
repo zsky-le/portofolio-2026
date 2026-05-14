@@ -176,7 +176,6 @@ function buildSlides() {
           </div>
         </div>
       </div>
-      <div class="vinyl-wrapper"><div class="vinyl"></div></div>
       </div><!-- /.s2-inner -->
     </div>`;
 

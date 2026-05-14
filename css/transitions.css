@@ -103,9 +103,8 @@
 }
 
 @media (max-width: 768px) {
-
-  .slide {
+  .slide.active {
     overflow-y: auto;
+    overflow-x: hidden;
   }
-
 }

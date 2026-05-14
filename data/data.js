@@ -203,7 +203,7 @@ const DATA = {
         link:     null,
         linkLabel:"",
         featured: false,
-        photo:    null,
+        photo:    "foto/dss scm cover.png",
         /* ↑ no photo yet — add one when you have it */
       },
       {
