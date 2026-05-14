@@ -144,12 +144,12 @@ function buildSlides() {
             View CV
           </a>
           <a class="s2-btn s2-btn-contact"
-             href="${d.personal.contactLink && d.personal.contactLink !== '#' ? d.personal.contactLink : 'mailto:' + d.personal.email}"
-             target="_blank"
-             rel="noopener noreferrer">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
-            Contact
-          </a>
+              href="${d.personal.contactLink && d.personal.contactLink !== '#' ? d.personal.contactLink : 'mailto:' + d.personal.email}"
+              target="_blank"
+              rel="noopener noreferrer">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+              LinkedIn
+            </a>
         </div>
         </div>
         <img class="s2-photo" src="${d.personal.photo}" alt="${d.personal.name}" />

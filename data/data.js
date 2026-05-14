@@ -23,13 +23,13 @@ const DATA = {
     photo: "foto/zaskia-profile.png",
     /* ↑ Replace with your real photo path */
  
-    cvLink:      "https://drive.google.com/file/d/1sS_V3Y1d8_bIvDX2feO4rXRW2FAGyYQP/view?usp=drive_link",
+    cvLink:      "https://drive.google.com/file/d/1K_yCsyN3D2vCIUfi2SKvVRDHac7R6R5Q/view?usp=sharing",
     /* ↑ Paste your CV link here, e.g. Google Drive share link */
  
-    email:       "zaskia@example.com",
-    /* ↑ Your email address */
+    linkedin:       "#",
+    /* ↑ Your LinkedIn profile link */
  
-    contactLink: "#",
+    contactLink: "https://www.linkedin.com/in/zaskia-muazatun/",
     /* ↑ Optional: LinkedIn, WhatsApp, etc. If empty, uses mailto: email above */
   },
 
