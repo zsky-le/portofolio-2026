@@ -298,9 +298,30 @@
 .proj-hub-overlay    { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 1.2em 1.4em; }
 .proj-hub-overlay-title { font-family: var(--font-serif); font-size: clamp(1.1rem, 2vw, 1.8rem); font-weight: 700; color: white; line-height: 1.2; }
 
-@media (max-width: 640px) {
-  .proj-hub-grid { grid-template-columns: 1fr; }
-  .proj-hub-card { padding: 1.5em; }
+@media (max-width: 768px) {
+  .proj-hub-card {
+    overflow-y: auto;
+    padding: 1.2rem;
+  }
+  .proj-hub-grid {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+  .proj-hub-item {
+    aspect-ratio: 16/7;
+    min-height: 120px;
+    border-radius: 18px;
+  }
+  .proj-hub-overlay-title {
+    font-size: clamp(1.1rem, 5vw, 1.5rem);
+  }
+  .proj-hub-title {
+    font-size: clamp(1.8rem, 8vw, 2.6rem);
+  }
+  .proj-hub-sub {
+    font-size: 0.92rem;
+    margin-bottom: 1rem;
+  }
 }
 
 /* ─────────────────────────────
@@ -669,36 +690,55 @@
 
 /* ── Mobile ── */
 @media (max-width: 768px) {
+  .detail-slide {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
   .detail-card {
     grid-template-columns: 1fr;
-    overflow-y: auto;
+    overflow-y: visible;
     min-height: auto;
-    gap: 1.2rem;
-    padding: 1.2rem;
+    gap: 1rem;
+    padding: 1rem;
+    margin-bottom: 4vh;
   }
   .detail-proj-card {
-    min-height: 260px;
-    max-height: 340px;
+    min-height: 220px;
+    max-height: 300px;
+    border-radius: 18px;
   }
   .detail-proj-title {
-    font-size: 1.1rem;
-  }
-  .detail-preview-img {
-    min-height: 200px;
-    max-height: 280px;
-  }
-  .detail-desc {
     font-size: 1rem;
-    line-height: 1.85;
+    line-height: 1.4;
+  }
+  .detail-category {
+    font-size: 0.8rem;
+  }
+  .detail-right {
+    gap: 0.8rem;
+  }
+  .detail-badges-wrap {
+    gap: 0.4em;
   }
   .detail-badge {
-    font-size: 0.85rem !important;
+    font-size: 0.8rem !important;
+    padding: 0.4em 0.9em !important;
+  }
+  .detail-desc {
+    font-size: 0.95rem;
+    line-height: 1.75;
+  }
+  .detail-preview-img {
+    min-height: 180px;
+    max-height: 240px;
+    border-radius: 14px;
   }
   .detail-cta-btn {
-    font-size: 0.88rem;
-    padding: 0.6em 1.2em;
+    font-size: 0.85rem;
+    padding: 0.55em 1.1em;
   }
 }
+
 /* ─────────────────────────────
    INTERN EXPERIENCE
 ───────────────────────────── */
@@ -1301,16 +1341,18 @@
 }
 
 @media (max-width: 900px) {
-
+  .vol-card {
+    overflow-y: auto;
+  }
   .vol-grid {
     grid-template-columns: 1fr;
+    gap: 0.9rem;
   }
-
   .vol-item {
-    aspect-ratio: 16/11;
-
-    min-height: 240px;
-    max-height: 320px;
+    aspect-ratio: 16/10;
+    min-height: 200px;
+    max-height: 280px;
+    border-radius: 18px;
   }
 }
 

@@ -160,46 +160,35 @@ document.addEventListener('wheel', e => {
 ============================================ */
 
 let touchStartY = 0;
+let touchStartX = 0;
 
 document.addEventListener('touchstart', e => {
-
-  touchStartY =
-    e.touches[0].clientY;
-
+  touchStartY = e.touches[0].clientY;
+  touchStartX = e.touches[0].clientX;
 }, { passive: true });
 
 document.addEventListener('touchend', e => {
 
-  const touchEndY =
-    e.changedTouches[0].clientY;
+  const touchEndY = e.changedTouches[0].clientY;
+  const touchEndX = e.changedTouches[0].clientX;
 
-  const diff =
-    touchStartY - touchEndY;
+  const diffY = touchStartY - touchEndY;
+  const diffX = Math.abs(touchStartX - touchEndX);
 
-  /* ignore tiny swipe */
-  if (Math.abs(diff) < 70) return;
+  /* ignore if too short, or if it's mostly horizontal (carousel drag) */
+  if (Math.abs(diffY) < 120) return;
+  if (diffX > Math.abs(diffY) * 0.6) return;
 
-  const idx =
-    linearOrder.indexOf(currentSlide);
+  const idx = linearOrder.indexOf(currentSlide);
 
   /* SWIPE UP → NEXT */
-  if (
-    diff > 0 &&
-    idx < linearOrder.length - 1
-  ) {
-
+  if (diffY > 0 && idx < linearOrder.length - 1) {
     goTo(linearOrder[idx + 1]);
-
   }
 
   /* SWIPE DOWN → PREVIOUS */
-  if (
-    diff < 0 &&
-    idx > 0
-  ) {
-
+  if (diffY < 0 && idx > 0) {
     goTo(linearOrder[idx - 1]);
-
   }
 
 }, { passive: true });
