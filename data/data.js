@@ -258,14 +258,14 @@ const DATA = {
       {
         text:     "<strong><em>Supported the internalization for ITS</em></strong> with ITS Global Engagement Season 15",
         featured: true,
-        link:     "#",
+        link:     "https://drive.google.com/file/d/1zHNCxpFcXe0XbjBELTiNQTs9ljCczMxf/view?usp=sharing",
         photo:    "foto/itsge cover.png",
         /* ↑ paste your volunteer photo path here */
       },
       {
         text:     "Giving my love for <em>Branding and Marketing</em> for Ini Lho ITS, UKM EXPO ITS and more...",
         featured: false,
-        link:     "#",
+        link:     "https://drive.google.com/file/d/128jlO5dWphScQk4WQ2K1qjk9K0xI7jU9/view?usp=drive_link",
         photo:    "foto/bnmcover.png",
         /* ↑ paste your volunteer photo path here */
       },

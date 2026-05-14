@@ -348,12 +348,16 @@ function buildSlides() {
         <h2 class="vol-title"><em>Volunteer</em> Experience</h2>
         <p class="vol-sub">${d.volunteer.subtitle}</p>
         <div class="vol-grid">
-          ${d.volunteer.roles.map(r => `
-            <div class="vol-item ${r.featured ? 'featured' : ''}"
-                 ${r.photo ? `style="background-image:url('${r.photo}');background-size:cover;background-position:center;"` : ''}>
+          ${d.volunteer.roles.map(r => {
+            const hasLink = r.link && r.link !== '#';
+            return `<a class="vol-item ${r.featured ? 'featured' : ''}"
+              href="${r.link || '#'}"
+              ${hasLink ? 'target="_blank" rel="noopener noreferrer"' : 'onclick="return false"'}
+              style="text-decoration:none;${r.photo ? `background-image:url('${r.photo}');background-size:cover;background-position:center;` : ''}">
               <div class="vol-item-overlay"></div>
               <div class="vol-item-text" style="position:relative;z-index:1">${r.text}</div>
-            </div>`).join('')}
+            </a>`;
+          }).join('')}
         </div>
       </div>
       ${backBtn('s2')}
