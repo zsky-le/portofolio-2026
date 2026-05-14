@@ -1,0 +1,28 @@
+/* ============================================
+   BASE.CSS
+   Reset, body, and foundational layout rules.
+   ============================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--cream);
+  font-family: var(--font-body);
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+em { font-style: italic; }
+a  { text-decoration: none; }
